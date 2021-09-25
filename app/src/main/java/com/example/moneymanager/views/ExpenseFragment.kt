@@ -85,10 +85,11 @@ class ExpenseFragment(private val contextAct: Context) :
 
     override fun onClick(exp: ExpenseEntity, position: Int) {
         val intent = Intent(context, EditExpense::class.java)
-//        intent.putExtra("title", exp.expTitle)
-//        intent.putExtra("desc", exp.expDesc)
-//        intent.putExtra("date", exp.expDate)
-//        intent.putExtra("amount", exp.expAmt.toString())
+        intent.putExtra("title", exp.expTitle)
+        intent.putExtra("desc", exp.expDesc)
+        intent.putExtra("date", exp.expDate)
+        intent.putExtra("amount", exp.expAmt.toString())
+        intent.putExtra("id", exp.id)
         startActivity(intent)
 
 //        cvEditExpenseLayout.visibility = View.VISIBLE
