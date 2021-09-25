@@ -14,13 +14,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
         android:gravity="center"
-        android:text="Add New Expense"
+        android:text="Edit Expense Details"
         android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="bold|italic" />
 
     <EditText
-        android:id="@+id/etExpTitle"
+        android:id="@+id/etEditExpTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -34,7 +34,7 @@
         android:textStyle="italic" />
 
     <EditText
-        android:id="@+id/etExpDesc"
+        android:id="@+id/etEditExpDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
@@ -47,7 +47,7 @@
         android:textStyle="italic" />
 
     <EditText
-        android:id="@+id/etExpDate"
+        android:id="@+id/etEditExpDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
@@ -60,7 +60,7 @@
         android:textStyle="italic" />
 
     <EditText
-        android:id="@+id/etExpAmount"
+        android:id="@+id/etEditExpAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
@@ -73,11 +73,11 @@
         android:textStyle="italic" />
 
     <Button
-        android:id="@+id/btnAddExp"
+        android:id="@+id/btnUpdateExp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/messenger_blue"
-        android:text="Add to list"
+        android:text="Update"
         android:textAllCaps="false"
         android:textStyle="italic" />
 

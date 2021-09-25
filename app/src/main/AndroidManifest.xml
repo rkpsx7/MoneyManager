@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.moneymanager" >
+    package="com.example.moneymanager">
 
     <application
+        android:name=".views.MoneyManagerApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MoneyManager" >
+        android:theme="@style/Theme.MoneyManager">
         <activity
-            android:name=".NewIncomeAddActivity"
+            android:name=".views.EditExpense"
             android:exported="true" />
         <activity
-            android:name=".NewExpensesAdd"
+            android:name=".views.SignUpActivity"
             android:exported="true" />
         <activity
-            android:name=".NewExpense"
+            android:name=".views.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true" >
+            android:name=".views.NewIncomeAddActivity"
+            android:exported="true" />
+        <activity
+            android:name=".views.NewExpensesAdd"
+            android:exported="true" />
+        <activity
+            android:name=".views.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

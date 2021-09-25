@@ -7,6 +7,7 @@
     android:padding="7dp">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvExpenseItem"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="@color/white"

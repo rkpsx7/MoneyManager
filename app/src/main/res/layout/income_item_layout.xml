@@ -53,11 +53,11 @@
 
                 <TextView
                     android:id="@+id/tvIncomeTitle"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Food"
                     android:textColor="#33cc33"
-                    android:textSize="24dp"
+                    android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -66,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tvIncomeTitle"
                     android:layout_centerVertical="true"
-                    android:text="12-01-2020"
+                    android:text="RAM Upgrade"
                     android:textColor="#cccccc"
                     android:textStyle="bold" />
             </RelativeLayout>

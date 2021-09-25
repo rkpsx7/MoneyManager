@@ -7,7 +7,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="12dp"
-    tools:context=".Fragments.NewExpenseAddFragment">
+    tools:context=".views.NewExpenseAddFragment">
 
     <TextView
         android:layout_width="match_parent"
