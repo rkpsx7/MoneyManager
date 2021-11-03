@@ -3,13 +3,15 @@ plugins {
     id 'kotlin-kapt'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
+    id 'com.google.gms.google-services'
 }
+apply plugin: 'com.android.application'
 
 android {
     compileSdk 30
 
     defaultConfig {
-        applicationId "com.example.moneymanager"
+        applicationId "com.rkpsx7.moneymanager"
         minSdk 21
         targetSdk 30
         versionCode 1
@@ -32,17 +34,23 @@ android {
         jvmTarget = '1.8'
     }
 }
+apply plugin: 'com.google.gms.google-services'
 
 dependencies {
 
+    implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.2'
+    implementation 'com.google.firebase:firebase-firestore-ktx:23.0.4'
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
+    implementation 'com.google.firebase:firebase-firestore:23.0.4'
     def anko_version = '0.10.0'
     //def room_version = "2.3.0"
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.30"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.31"
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
@@ -51,8 +59,8 @@ dependencies {
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
 
     //Room
-    implementation 'androidx.room:room-ktx:2.1.0'
-    kapt 'androidx.room:room-compiler:2.1.0'
+    implementation 'androidx.room:room-ktx:2.3.0'
+    kapt 'androidx.room:room-compiler:2.3.0'
 
 
     //implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'
@@ -71,12 +79,42 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$arch_version"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$arch_version"
 
-    // Retrofit & OkHttp
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    // This library is used by retrofit internally to convert json-pojo and pojo-json
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    //This library is used to observe the API logs, Http status code and the API response
-    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+    // Also declare the dependency for the Google Play services library and specify its version
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'com.mikhaellopez:circularimageview:4.3.0'
+
+    implementation 'com.google.android.material:material:1.4.0'
+
+    // Import the Firebase BoM
+
+    implementation platform('com.google.firebase:firebase-bom:29.0.0')
 
 
+    // Add the dependency for the Firebase SDK for Google Analytics
+
+    // When using the BoM, don't specify versions in Firebase dependencies
+
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    implementation platform('com.google.firebase:firebase-bom:29.0.0')
+
+    // Declare the dependencies for the desired Firebase products without specifying versions
+    // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+
+
+
+
+    //mp android charts
+    implementation "androidx.appcompat:appcompat:1.3.1"
+
+    implementation files('libs/MPAndroidChart-v3.0.1.jar')
+    implementation("io.coil-kt:coil:1.4.0")
+
+    implementation 'pl.rspective.pagerdatepicker:pagerdatepicker:1.2.0'
 }

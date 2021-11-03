@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">MoneyManager</string>
+    <string name="app_name">Money Manager</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="viewPagerBehaviour">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="Income_detail_header">Income Details</string>
+    <string name="expense_detail_header">Expense Details</string>
+    <string name="tip_at_profile_frag">Press and hold a record to get delete option.\nPress the app icon at top to sync with other devices (if any).</string>
 </resources>

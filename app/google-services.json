@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "551053652914",
+    "project_id": "money-manager-rkpsx7",
+    "storage_bucket": "money-manager-rkpsx7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551053652914:android:58465b8276e71fd3b9aaab",
+        "android_client_info": {
+          "package_name": "com.rkpsx7.moneymanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "551053652914-qs989mul8t6ng7690c2cdci18s23ttb2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rkpsx7.moneymanager",
+            "certificate_hash": "15be8149b0707fa43f19d93d982107f3a0ad4465"
+          }
+        },
+        {
+          "client_id": "551053652914-bpiibf2v5r0a5p5nrvhkuc61uqhn0pvj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8SjG3d34HLeom9efgmu5r0k_LCMP4XlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "551053652914-bpiibf2v5r0a5p5nrvhkuc61uqhn0pvj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

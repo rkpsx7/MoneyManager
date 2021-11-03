@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_grey"
-    tools:context=".views.ExpenseFragment">
+    android:background="@color/black"
+    tools:context=".views.expense.ExpenseFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewIncome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:itemCount="5"
+        tools:itemCount="3"
         tools:listitem="@layout/income_item_layout" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

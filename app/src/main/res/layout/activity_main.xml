@@ -10,26 +10,39 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#006AFF">
+        android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/messenger_blue"
-            app:layout_scrollFlags="enterAlways|scroll|snap" />
+            android:background="@color/black_amoled"
+            app:layout_scrollFlags="enterAlways|scroll|snap"
+            app:titleTextColor="#fff">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/app_bar_icon_refresh"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="17dp"
+                android:layout_marginBottom="2dp"
+                android:src="@drawable/r72"
+                app:shapeAppearanceOverlay="@style/roundedCorners" />
+
+        </androidx.appcompat.widget.Toolbar>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#006AFF"
-            app:tabIndicatorColor="#fff"
+            android:background="@color/black_amoled"
+            app:tabIndicatorColor="@color/messenger_blue"
             app:tabIndicatorHeight="3dp"
             app:tabMode="fixed"
-            app:tabSelectedTextColor="@color/white"
-            app:tabTextColor="@color/white"/>
+            app:tabSelectedTextColor="#fff"
+            app:tabTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

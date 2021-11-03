@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.moneymanager">
+    package="com.rkpsx7.moneymanager">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".views.MoneyManagerApp"
@@ -10,30 +12,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MoneyManager">
+
         <activity
-            android:name=".views.EditExpense"
-            android:exported="true" />
-        <activity
-            android:name=".views.SignUpActivity"
-            android:exported="true" />
-        <activity
-            android:name=".views.LoginActivity"
-            android:exported="true" />
-        <activity
-            android:name=".views.NewIncomeAddActivity"
-            android:exported="true" />
-        <activity
-            android:name=".views.NewExpensesAdd"
-            android:exported="true" />
-        <activity
-            android:name=".views.MainActivity"
+            android:name=".views.create_account_frags.IntroScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".views.income.EditIncome"
+            android:exported="true" />
+        <activity
+            android:name=".views.expense.EditExpense"
+            android:exported="true" />
+        <activity
+            android:name=".views.income.NewIncomeAdd"
+            android:exported="true" />
+        <activity
+            android:name=".views.expense.NewExpensesAdd"
+            android:exported="true" />
+        <activity
+            android:name=".views.MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
