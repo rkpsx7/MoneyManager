@@ -8,10 +8,24 @@ plugins {
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\RX-S7\\Desktop\\keystore_money_manager.jks')
+            storePassword 'rkpsx7btw@dev'
+            keyAlias 'key1'
+            keyPassword 'rkpsx7btw@dev'
+        }
+        release {
+            storeFile file('C:\\Users\\RX-S7\\Desktop\\keystore_money_manager.jks')
+            storePassword 'rkpsx7btw@dev'
+            keyAlias 'key1'
+            keyPassword 'rkpsx7btw@dev'
+        }
+    }
     compileSdk 30
 
     defaultConfig {
-        applicationId "com.rkpsx7.moneymanager"
+        applicationId "com.rkpsx7.moneymanager7"
         minSdk 21
         targetSdk 30
         versionCode 1

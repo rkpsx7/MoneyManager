@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rkpsx7.moneymanager">
+    package="com.rkpsx7.moneymanager7">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".views.MoneyManagerApp"
+        android:name="com.rkpsx7.moneymanager7.views.MoneyManagerApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MoneyManager">
 
         <activity
-            android:name=".views.create_account_frags.IntroScreen"
+            android:name="com.rkpsx7.moneymanager7.views.create_account_frags.IntroScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,19 +22,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".views.income.EditIncome"
+            android:name="com.rkpsx7.moneymanager7.views.income.EditIncome"
             android:exported="true" />
         <activity
-            android:name=".views.expense.EditExpense"
+            android:name="com.rkpsx7.moneymanager7.views.expense.EditExpense"
             android:exported="true" />
         <activity
-            android:name=".views.income.NewIncomeAdd"
+            android:name="com.rkpsx7.moneymanager7.views.income.NewIncomeAdd"
             android:exported="true" />
         <activity
-            android:name=".views.expense.NewExpensesAdd"
+            android:name="com.rkpsx7.moneymanager7.views.expense.NewExpensesAdd"
             android:exported="true" />
         <activity
-            android:name=".views.MainActivity"
+            android:name="com.rkpsx7.moneymanager7.views.MainActivity"
             android:exported="true" />
     </application>
 
