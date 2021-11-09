@@ -10,7 +10,7 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         debug {
-            storeFile file('C:\\Users\\RX-S7\\Desktop\\keystore_money_manager.jks')
+            storeFile file('C:\\Users\\RX-S7\\Desktop\\New folder (2)\\keystore_money_manager.jks')
             storePassword 'rkpsx7btw@dev'
             keyAlias 'key1'
             keyPassword 'rkpsx7btw@dev'
@@ -28,8 +28,8 @@ android {
         applicationId "com.rkpsx7.moneymanager7"
         minSdk 21
         targetSdk 30
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
