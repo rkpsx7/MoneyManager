@@ -31,21 +31,72 @@
         android:scaleType="centerCrop"
         android:src="@drawable/r7" />
 
-    <TextView
-        android:id="@+id/btn_sign_in"
-        android:layout_width="200dp"
+    <!--    <TextView-->
+    <!--        android:id="@+id/btn_sign_in"-->
+    <!--        android:layout_width="200dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:gravity="center"-->
+    <!--        android:visibility="visible"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_marginBottom="100dp"-->
+    <!--        android:background="@drawable/btn_sign_in_background"-->
+    <!--        android:maxLines="1"-->
+    <!--        android:padding="12dp"-->
+    <!--        android:text="Get Started"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="20sp"-->
+    <!--        android:textStyle="bold|italic" />-->
+
+    <LinearLayout
+        android:id="@+id/layout_sign_options"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
         android:visibility="gone"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
-        android:background="@drawable/btn_sign_in_background"
-        android:maxLines="1"
-        android:padding="12dp"
-        android:text="Get Started"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_continue_with_google"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:backgroundTint="@color/transparent"
+            android:drawableLeft="@drawable/ic_google"
+            android:padding="12dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="CONTINUE WITH GOOGLE"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            app:cornerRadius="32dp"
+            app:rippleColor="@color/white"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp" />
+
+        <TextView
+            android:id="@+id/btn_more_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="12dp"
+            android:padding="12dp"
+            android:text="More Options >"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+    </LinearLayout>
 
 </RelativeLayout>

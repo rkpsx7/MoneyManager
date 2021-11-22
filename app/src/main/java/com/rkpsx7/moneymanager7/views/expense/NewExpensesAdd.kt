@@ -59,9 +59,6 @@ class NewExpensesAdd : AppCompatActivity() {
                 .setTheme(R.style.calender_theme)
                 .build()
 
-
-
-
         btn_select_date_exp.setOnClickListener {
             datePicker.show(supportFragmentManager, "DatePicker")
         }
@@ -74,7 +71,6 @@ class NewExpensesAdd : AppCompatActivity() {
             val date = Date(selecton + offsetFromUTC)
             etExpDate.setText(simpleDateFormat.format(date))
         }
-
     }
 
     private fun toast(msg: String) {

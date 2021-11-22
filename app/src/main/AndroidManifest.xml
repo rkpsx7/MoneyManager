@@ -3,38 +3,51 @@
     package="com.rkpsx7.moneymanager7">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.rkpsx7.moneymanager7.views.MoneyManagerApp"
+        android:name=".views.MoneyManagerApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MoneyManager">
-
         <activity
-            android:name="com.rkpsx7.moneymanager7.views.create_account_frags.IntroScreen"
+            android:name=".views.SettingsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".views.create_account_frags.ActivitySignUp"
+            android:exported="true" />
+        <activity
+            android:name=".views.create_account_frags.ActivitySignIn"
+            android:exported="true" />
+        <activity
+            android:name=".views.create_account_frags.IntroScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.rkpsx7.moneymanager7.views.income.EditIncome"
+            android:name=".views.income.EditIncome"
             android:exported="true" />
         <activity
-            android:name="com.rkpsx7.moneymanager7.views.expense.EditExpense"
+            android:name=".views.expense.EditExpense"
+            android:exported="true" />
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/> <!-- optional (needed if default theme has no action bar) -->
+        <activity
+            android:name=".views.income.NewIncomeAdd"
             android:exported="true" />
         <activity
-            android:name="com.rkpsx7.moneymanager7.views.income.NewIncomeAdd"
+            android:name=".views.expense.NewExpensesAdd"
             android:exported="true" />
         <activity
-            android:name="com.rkpsx7.moneymanager7.views.expense.NewExpensesAdd"
-            android:exported="true" />
-        <activity
-            android:name="com.rkpsx7.moneymanager7.views.MainActivity"
+            android:name=".views.MainActivity"
             android:exported="true" />
     </application>
 

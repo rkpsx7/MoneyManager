@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.create_account_frags.ActivitySignIn">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/amoled_wallpaper" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="166dp"
+        android:text="Sign In using e-mail"
+        android:textColor="@color/wht"
+        android:textSize="22sp"
+        android:textStyle="italic|bold" />
+
+    <LinearLayout
+        android:id="@+id/middle_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_email_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:hint="Email"
+            android:lines="1"
+            android:maxLines="1"
+            android:outlineSpotShadowColor="@color/black_amoled"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColorHint="@color/visible_grey"
+            app:backgroundTint="@color/visible_grey" />
+
+        <EditText
+            android:id="@+id/et_password_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColorHint="@color/visible_grey"
+            app:backgroundTint="@color/visible_grey" />
+
+        <TextView
+            android:id="@+id/btn_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="22dp"
+            android:text="Forgot Password?"
+            android:textColor="@color/wht"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="22dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_start_sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="22dp"
+                android:backgroundTint="@color/transparent"
+                android:paddingLeft="22dp"
+                android:paddingRight="22dp"
+                android:text="Sign In"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:cornerRadius="32dp"
+                app:rippleColor="@color/white"
+                app:strokeColor="@color/white"
+                app:strokeWidth="1dp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar_sign_in"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

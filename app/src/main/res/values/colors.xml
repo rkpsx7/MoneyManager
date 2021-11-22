@@ -20,4 +20,6 @@
     <color name="parrot_green">#c5ff8c</color>
     <color name="sky_blue">#8cebff</color>
     <color name="bright_green">#33cc33</color>
+    <color name="transparent">#0000ffff</color>
+    <color name="wht">#fff</color>
 </resources>

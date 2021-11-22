@@ -6,4 +6,5 @@
     <string name="Income_detail_header">Income Details</string>
     <string name="expense_detail_header">Expense Details</string>
     <string name="tip_at_profile_frag">Press and hold a record to get delete option.\nPress the app icon at top to sync with other devices (if any).</string>
+    <string name="signup_notice">After signing up for an account, please go to your email inbox to verify your account.</string>
 </resources>

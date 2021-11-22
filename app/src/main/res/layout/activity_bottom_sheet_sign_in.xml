@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#fff"
+        android:background="@color/wht"
         android:orientation="vertical"
         android:padding="12dp">
 
@@ -23,34 +23,46 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:padding="7dp"
-                android:text="Log in or Sign Up"
-                android:textColor="@color/black"
+                android:text="Log In or Sign Up with E-Mail"
+                android:textColor="@color/black_amoled"
                 android:textSize="18sp"
                 android:textStyle="bold|italic" />
-
-            <ProgressBar
-                android:id="@+id/progressBar"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:visibility="gone" />
 
         </RelativeLayout>
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_continue_with_google"
+            android:id="@+id/btn_sign_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:drawableLeft="@drawable/ic_google"
             android:padding="12dp"
-            android:text="CONTINUE WITH GOOGLE"
+            android:layout_marginBottom="12dp"
+            android:drawableLeft="@drawable/ic_email_env"
             android:textAlignment="center"
+            android:text="Log-In"
+            android:textStyle="italic"
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:backgroundTint="#fff"
+            app:backgroundTint="@color/wht"
+            app:cornerRadius="32dp"
+            android:textAllCaps="false"
+            app:rippleColor="@color/white"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_email_env"
+            android:padding="12dp"
+            android:text="Sign-Up"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:backgroundTint="@color/wht"
             app:cornerRadius="32dp"
             app:rippleColor="@color/white"
             app:strokeColor="@color/black"
@@ -72,19 +84,19 @@
         <!--            app:strokeColor="@color/black"-->
         <!--            app:strokeWidth="1dp" />-->
 
-        <!--        <com.google.android.material.button.MaterialButton-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_margin="12dp"-->
-        <!--            android:padding="18dp"-->
-        <!--            android:text="EMAIL"-->
-        <!--            android:textAlignment="center"-->
-        <!--            android:textColor="@color/black"-->
-        <!--            android:textSize="18sp"-->
-        <!--            app:backgroundTint="@color/white"-->
-        <!--            app:cornerRadius="32dp"-->
-        <!--            app:strokeColor="@color/black"-->
-        <!--            app:strokeWidth="1dp" />-->
+        <!--                <com.google.android.material.button.MaterialButton-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_margin="12dp"-->
+        <!--                    android:padding="18dp"-->
+        <!--                    android:text="EMAIL"-->
+        <!--                    android:textAlignment="center"-->
+        <!--                    android:textColor="@color/black"-->
+        <!--                    android:textSize="18sp"-->
+        <!--                    app:backgroundTint="@color/white"-->
+        <!--                    app:cornerRadius="32dp"-->
+        <!--                    app:strokeColor="@color/black"-->
+        <!--                    app:strokeWidth="1dp" />-->
 
 
     </LinearLayout>

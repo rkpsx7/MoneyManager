@@ -2,25 +2,45 @@ package com.rkpsx7.moneymanager7.repository
 
 import android.util.Log
 import androidx.lifecycle.LiveData
-import com.rkpsx7.moneymanager7.models.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
+import com.rkpsx7.moneymanager7.models.*
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 
 class MoneyManagerRepo(private val dao: DAO) {
 
     private val fsRoot = FirebaseFirestore.getInstance()
-    private val userUID = FirebaseAuth.getInstance().currentUser?.email!!
-    private val userRef = fsRoot.collection("Users")
-    private val expenseRef = userRef.document(userUID).collection("expenses")
-    private val incomeRef = userRef.document(userUID).collection("incomes")
+    private val userID = FirebaseAuth.getInstance().currentUser?.email!!
+    private val userRef = fsRoot.collection("Users").document(userID)
+    private val expenseRef = userRef.collection("expenses")
+    private val incomeRef = userRef.collection("incomes")
 
+    fun isUserExists(email: String): Boolean {
+        var isExt = false
+        fsRoot.collection("Users").document(email).collection("UserDetails")
+            .addSnapshotListener { snapshot, e ->
+                if (snapshot != null && !snapshot.isEmpty) {
+                    isExt = true
+                }
+            }
+        Log.i("ssss", "isUserExists: $isExt ")
+        return isExt
+
+    }
 
     fun addUserToServer(user: UserObjForServer) {
-        userRef.document(user.email).set(user)
+        fsRoot.collection("Users").document(user.email).collection("UserDetails")
+            .document("account").set(user, SetOptions.merge())
+    }
+
+    fun updateUserToServer(map: HashMap<String, String>, email: String) {
+        CoroutineScope(IO).launch {
+            fsRoot.collection("Users").document(email).collection("UserDetails")
+                .document("account").set(map, SetOptions.merge())
+        }
     }
 
     fun getRecordsFromServer() {
@@ -37,6 +57,9 @@ class MoneyManagerRepo(private val dao: DAO) {
                 }
             }
         }
+
+
+
 
         incomeRef.addSnapshotListener { snapshot, e ->
             if (snapshot != null && !snapshot.isEmpty) {
@@ -55,7 +78,7 @@ class MoneyManagerRepo(private val dao: DAO) {
     fun updateExpensesToServer(expenses: ArrayList<ExpenseEntity>) {
         CoroutineScope(IO).launch {
             for (i in 0 until expenses.size) {
-                expenseRef.document(expenses[i].id.toString()).set(expenses[i])
+                expenseRef.document(expenses[i].id.toString()).set(expenses[i], SetOptions.merge())
             }
         }
     }
@@ -63,7 +86,7 @@ class MoneyManagerRepo(private val dao: DAO) {
     fun updateIncomeToServer(incomes: MutableList<IncomeEntity>) {
         CoroutineScope(IO).launch {
             for (i in 0 until incomes.size) {
-                incomeRef.document(incomes[i].id.toString()).set(incomes[i])
+                incomeRef.document(incomes[i].id.toString()).set(incomes[i], SetOptions.merge())
             }
         }
     }
@@ -78,14 +101,22 @@ class MoneyManagerRepo(private val dao: DAO) {
         }
     }
 
+    fun updateUserToDB(user: UserEntity) {
+        CoroutineScope(IO).launch {
+            dao.updateUser(user)
+            Log.i("updateuserr", "updateUserToDB:reached ")
+        }
+    }
+
+
     fun insertExpense(exp: ExpenseEntity) {
-        CoroutineScope(Dispatchers.IO).launch {
+        CoroutineScope(IO).launch {
             dao.insertExpense(exp)
         }
     }
 
     fun insertIncome(income: IncomeEntity) {
-        CoroutineScope(Dispatchers.IO).launch {
+        CoroutineScope(IO).launch {
             dao.insertIncome(income)
         }
     }
@@ -110,15 +141,15 @@ class MoneyManagerRepo(private val dao: DAO) {
     }
 
     //delete
-    fun deleteExpense(expObj: ExpenseEntity){
-        CoroutineScope(Dispatchers.IO).launch {
+    fun deleteExpense(expObj: ExpenseEntity) {
+        CoroutineScope(IO).launch {
             dao.deleteExpense(expObj)
             expenseRef.document(expObj.id.toString()).delete()
         }
     }
 
-    fun deleteIncome(incObj: IncomeEntity){
-        CoroutineScope(Dispatchers.IO).launch {
+    fun deleteIncome(incObj: IncomeEntity) {
+        CoroutineScope(IO).launch {
             dao.deleteIncome(incObj)
             incomeRef.document(incObj.id.toString()).delete()
         }
@@ -126,13 +157,13 @@ class MoneyManagerRepo(private val dao: DAO) {
 
     //update
     fun updateExpense(exp: ExpenseEntity) {
-        CoroutineScope(Dispatchers.IO).launch {
+        CoroutineScope(IO).launch {
             dao.updateExpense(exp)
         }
     }
 
     fun updateIncome(Inc: IncomeEntity) {
-        CoroutineScope(Dispatchers.IO).launch {
+        CoroutineScope(IO).launch {
             dao.updateIncome(Inc)
         }
     }

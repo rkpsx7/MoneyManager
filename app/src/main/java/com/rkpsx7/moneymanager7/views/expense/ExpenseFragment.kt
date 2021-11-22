@@ -3,11 +3,13 @@ package com.rkpsx7.moneymanager7.views.expense
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.auth.FirebaseAuth
 import com.rkpsx7.moneymanager7.R
 import com.rkpsx7.moneymanager7.interfaces.onExpenseItemClickListener
 import com.rkpsx7.moneymanager7.models.DAO
@@ -30,6 +32,7 @@ class ExpenseFragment :
     lateinit var dao: DAO
     lateinit var repo: MoneyManagerRepo
     lateinit var viewModel: MoneyManagerViewModel
+    //private lateinit var auth:FirebaseAuth
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -38,8 +41,9 @@ class ExpenseFragment :
         dao = mainRoomDb.getDao()
         repo = MoneyManagerRepo(dao)
         viewModel = MoneyManagerViewModel(repo)
+        //auth = FirebaseAuth.getInstance()
 
-
+        //Log.i("rrrrrrrrr", "${auth.currentUser?.uid}  ${auth.currentUser?.email}  pic ${auth.currentUser?.photoUrl} name: ${auth.currentUser?.displayName}")
         newExpenseButton.setOnClickListener {
             val intent = Intent(context, NewExpensesAdd::class.java)
             activity?.startActivity(intent)

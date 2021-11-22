@@ -1,20 +1,24 @@
 package com.rkpsx7.moneymanager7.views.profile
 
+import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Base64
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import coil.load
+import com.bumptech.glide.Glide
+import com.github.mikephil.charting.components.Description
+import com.github.mikephil.charting.data.PieData
+import com.github.mikephil.charting.data.PieDataSet
+import com.github.mikephil.charting.data.PieEntry
 import com.rkpsx7.moneymanager7.R
 import com.rkpsx7.moneymanager7.models.DAO
 import com.rkpsx7.moneymanager7.models.MainRoomDb
 import com.rkpsx7.moneymanager7.repository.MoneyManagerRepo
 import com.rkpsx7.moneymanager7.viewModels.MoneyManagerViewModel
-import com.github.mikephil.charting.components.Description
-import com.github.mikephil.charting.data.PieData
-import com.github.mikephil.charting.data.PieDataSet
-import com.github.mikephil.charting.data.PieEntry
+import com.rkpsx7.moneymanager7.views.SettingsActivity
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 
@@ -28,33 +32,39 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mainRoomDb = MainRoomDb.getMainRoomDb(this.requireActivity())
+        mainRoomDb = MainRoomDb.getMainRoomDb(requireActivity())
         dao = mainRoomDb.getDao()
         val repo = MoneyManagerRepo(dao)
         val viewModel = MoneyManagerViewModel(repo)
 
-        viewModel.getUserDetailsFromDB().observe(this.requireActivity(), {
-            iv_user_pic.load(it.profile_img)
-            tv_user_name.text = it.name
-            tv_email_id.text = it.email
+        btn_settings.setOnClickListener {
+            startActivity(Intent(requireActivity(), SettingsActivity::class.java))
+        }
 
+        viewModel.getUserDetailsFromDB().observe(requireActivity(), {
+            if (it != null) {
+                if (it.profile_img != "N/A") {
+                    val img = stringToBitMap(it.profile_img)
+                    Glide.with(iv_user_pic).load(img).into(iv_user_pic)
+                }
+                tv_user_name.text = it.name
+                tv_email_id.text = it.email
+            }
         })
 
-        viewModel.getTotalExpenses().observe(viewLifecycleOwner, Observer {
-            if (it != null)
-                totalExp = it
-            if (it == null)
-                totalExp = 0
-            tvExpenseTotal.text = "₹ ${totalExp.toString()}"
+        viewModel.getTotalExpenses().observe(viewLifecycleOwner, {
+            totalExp = it ?: 0
+            tvExpenseTotal.text = "₹ $totalExp"
             setPieChart()
         })
 
-        viewModel.getTotalIncomes().observe(viewLifecycleOwner, Observer {
-            if (it != null)
-                totalInc = it
-            if (it == null)
-                totalInc = 0
-            tvIncomeTotal.text = "₹ ${totalInc.toString()}"
+        viewModel.getTotalIncomes().observe(viewLifecycleOwner, {
+            totalInc = it ?: 0
+//            if (it != null)
+//                totalInc = it
+//            else
+//                totalInc = 0
+            tvIncomeTotal.text = "₹ $totalInc"
             setPieChart()
         })
 
@@ -87,5 +97,17 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         pie_chart.invalidate()
 
     }
+
+    private fun stringToBitMap(encodedString: String?): Bitmap? {
+        return try {
+            val encodeByte =
+                Base64.decode(encodedString, Base64.DEFAULT)
+            BitmapFactory.decodeByteArray(encodeByte, 0, encodeByte.size)
+        } catch (e: java.lang.Exception) {
+            e.message
+            null
+        }
+    }
+
 
 }

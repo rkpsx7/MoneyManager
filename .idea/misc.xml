@@ -8,18 +8,27 @@
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/btn_sign_in_background.xml" value="0.26615384615384613" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/edittext_background.xml" value="0.26615384615384613" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/floating_button_background.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_back_button.xml" value="0.2703125" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.26615384615384613" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_coins_money.xml" value="0.26615384615384613" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_edit.xml" value="0.14739583333333334" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_edit_2.xml" value="0.2703125" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_email.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_email_env.xml" value="0.25" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_google.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_info_blue.xml" value="0.2703125" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_info_red.xml" value="0.2703125" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_launcher_app_icon_background.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_launcher_app_icon_foreground.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_settings_icon.xml" value="0.2703125" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_stats.xml" value="0.2518518518518518" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_user.xml" value="0.2564814814814815" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/ic_user_colorful.xml" value="0.22870370370370371" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/drawable/sign_edit_text_back.xml" value="0.2703125" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout-v23/activity_sign_up.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout-v23/fragment_expense.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/activity_bottom_sheet_sign_in.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/activity_bottom_sheet_sign_in.xml" value="0.264" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/activity_create_account.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/activity_custom_bottom_sheet.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/activity_edit_expense.xml" value="0.25416666666666665" />
@@ -32,17 +41,22 @@
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/activity_new_income_add.xml" value="0.264" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/activity_new_income_add2.xml" value="0.1" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/activity_records_manager.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/activity_settings.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/activity_sign_in.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/activity_sign_up2.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/activity_splash_screen.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/activity_view_details.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/alert_dialog_delete.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/alt_diag_edit_name.xml" value="0.264" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/alt_diag_view_details.xml" value="0.1" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/expenses_item_layout.xml" value="0.264" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/fragment_balance.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/fragment_expense.xml" value="0.264" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/fragment_income.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/fragment_new_expense_add.xml" value="0.264" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/fragment_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/fragment_sign_in.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/MoneyManager/app/src/main/res/layout/income_item_layout.xml" value="0.25416666666666665" />
       </map>
     </option>

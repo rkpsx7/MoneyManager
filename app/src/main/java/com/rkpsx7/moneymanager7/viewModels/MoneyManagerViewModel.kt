@@ -2,7 +2,10 @@ package com.rkpsx7.moneymanager7.viewModels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.rkpsx7.moneymanager7.models.*
+import com.rkpsx7.moneymanager7.models.ExpenseEntity
+import com.rkpsx7.moneymanager7.models.IncomeEntity
+import com.rkpsx7.moneymanager7.models.UserEntity
+import com.rkpsx7.moneymanager7.models.UserObjForServer
 import com.rkpsx7.moneymanager7.repository.MoneyManagerRepo
 
 class MoneyManagerViewModel(private val repo: MoneyManagerRepo) : ViewModel() {
@@ -12,8 +15,20 @@ class MoneyManagerViewModel(private val repo: MoneyManagerRepo) : ViewModel() {
         return repo.getUserDetailsFromDB()
     }
 
+    fun isUserExists(email: String): Boolean {
+        return repo.isUserExists(email)
+    }
+
     fun insertUserToDB(user: UserEntity) {
         repo.insertUserToDB(user)
+    }
+
+    fun updateUserToDB(user: UserEntity) {
+        repo.updateUserToDB(user)
+    }
+
+    fun updateUserToServer(map: HashMap<String, String>, email: String) {
+        repo.updateUserToServer(map, email)
     }
 
     fun addUserToServer(user: UserObjForServer) {

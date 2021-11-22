@@ -43,16 +43,14 @@ class MainActivity : AppCompatActivity() {
         dao = mainRoomDb.getDao()
 
         val repo = MoneyManagerRepo(dao)
-        val viewModelFactory = ViewModelFactory(repo)
-        val viewModel =
-            ViewModelProviders.of(this, viewModelFactory).get(MoneyManagerViewModel::class.java)
+        val viewModel =MoneyManagerViewModel(repo)
+
 
 
         viewPagerAdapter = viewPagerAdapter(this, supportFragmentManager, tabLayout!!.tabCount)
         viewPager?.adapter = viewPagerAdapter
 
         viewPager!!.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
-
 
         tabLayout!!.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {

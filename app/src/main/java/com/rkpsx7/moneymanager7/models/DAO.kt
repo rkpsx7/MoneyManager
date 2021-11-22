@@ -2,6 +2,7 @@ package com.rkpsx7.moneymanager7.models
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import androidx.room.OnConflictStrategy.REPLACE
 
 @Dao
 interface DAO {
