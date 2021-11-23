@@ -11,7 +11,7 @@ Money Manager helps you track your financial activity efficiently. Its simple de
 - Firbase - Firestore
 - Kotlin
 
-## Used Open Source-Libraries 😎
+## Used Open Source-Libraries
 - [Glide](https://github.com/bumptech/glide)
 - [Circular Image View](https://github.com/hdodenhof/CircleImageView)
 - [COIL](https://github.com/coil-kt/coil.git)
