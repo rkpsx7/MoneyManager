@@ -9,17 +9,13 @@ Money Manager helps you track your financial activity efficiently. Its simple de
 - Android Studio
 - Android SDK
 - Firbase - Firestore
+- Kotlin
 
 ## Used Open Source-Libraries 😎
 - [Glide](https://github.com/bumptech/glide)
 - [Circular Image View](https://github.com/hdodenhof/CircleImageView)
 - [COIL](https://github.com/coil-kt/coil.git)
 - [MP Android Charts](https://github.com/PhilJay/MPAndroidChart.git)
-
-## Built With 🚀
-
-- [Kotlin](https://kotlinlang.org/)
-- [Android](https://www.android.com/intl/en_in/)
 
 
 ## Instructions to clone this project ✌
